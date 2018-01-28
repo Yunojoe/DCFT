@@ -1,29 +1,49 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class gameManager : MonoBehaviour
-{
+//This class will handle all the gamestates required throughout the game
+public class GameManager : MonoBehaviour {
+    #region Variables
+    public DungeonGenerator dungeonPrefab; //Allows us to create the object
+    private DungeonGenerator dungeonInstance; //Can create more instances of the object.
 
-    private void Start(){
-        BeginGame();
+    #endregion
+
+
+    #region Functions
+    private void Start()
+    {
+        GenerateDungeon(0);
     }
 
-    private void Update(){
-        if (Input.GetKeyDown(KeyCode.Space)) //Todo - change the "reset" key to something better or even a menu button
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            RestartGame();
+            GenerateDungeon(1);
+            Debug.Log("I am Running");
+        }
+            
+    }
+
+    #region DungeonRelated Functions
+    //Begins the generation of the dungeon, takes in a value to choose whether to remake the dungeon or not.
+    private void GenerateDungeon(int restart)
+    {
+        if (restart == 1)
+        {
+            StopAllCoroutines();
+            Destroy(dungeonInstance.gameObject);
+            GenerateDungeon(0);
+        }
+        else
+        {
+            dungeonInstance = Instantiate(dungeonPrefab) as DungeonGenerator;
+            StartCoroutine(dungeonInstance.Generate());
         }
     }
-
-    public mapGenerator dungeonPrefab;
-    private mapGenerator dungeonInstance;
-
-    private void BeginGame() {
-        dungeonInstance = Instantiate(dungeonPrefab) as mapGenerator;
-        dungeonInstance.Generate();
-    }
-
-    private void RestartGame() {
-
-    }
+    #endregion
+    #endregion
 }
+

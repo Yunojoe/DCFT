@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class dungeonCell : MonoBehaviour {
-
-    
+public class DungeonCell : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
