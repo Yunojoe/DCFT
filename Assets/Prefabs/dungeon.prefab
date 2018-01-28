@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4308189550647282}
   - component: {fileID: 114451419900439068}
   m_Layer: 0
-  m_Name: Dungeon
+  m_Name: dungeon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,8 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62d26de53ac0d24cb7d140b62f7a86c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dungeonSizeX: 0
-  dungeonSizeZ: 0
   generationStopDelay: 0
   cellPrefab: {fileID: 114158678897662198, guid: 529bea87eecfc954f9b969aaa75a2252,
     type: 2}
+  size:
+    x: 0
+    z: 0
