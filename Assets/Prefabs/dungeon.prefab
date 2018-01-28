@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generationStopDelay: 0
-  cellPrefab: {fileID: 114158678897662198, guid: 529bea87eecfc954f9b969aaa75a2252,
+  cellPrefab: {fileID: 114746645443328260, guid: 529bea87eecfc954f9b969aaa75a2252,
     type: 2}
   size:
     x: 0
