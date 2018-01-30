@@ -9,58 +9,48 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1083504020266018}
+  m_RootGameObject: {fileID: 1114767934113812}
   m_IsPrefabParent: 1
---- !u!1 &1083504020266018
+--- !u!1 &1114767934113812
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4308189550647282}
-  - component: {fileID: 114451419900439068}
+  - component: {fileID: 4947230994885212}
+  - component: {fileID: 114454041676981186}
   m_Layer: 0
-  m_Name: dungeon
+  m_Name: Dungeon Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4308189550647282
+--- !u!4 &4947230994885212
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1083504020266018}
+  m_GameObject: {fileID: 1114767934113812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.1980195, y: -0.94125795, z: -11.108625}
+  m_LocalPosition: {x: -2.6137757, y: -8.982557, z: 5.5573335}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114451419900439068
+--- !u!114 &114454041676981186
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1083504020266018}
+  m_GameObject: {fileID: 1114767934113812}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d62d26de53ac0d24cb7d140b62f7a86c, type: 3}
+  m_Script: {fileID: 11500000, guid: ca5d219b0f590e5489f6c2ded9055fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generationStopDelay: 0
-  cellPrefab:
-  - {fileID: 114746645443328260, guid: 529bea87eecfc954f9b969aaa75a2252, type: 2}
-  - {fileID: 114112443480965448, guid: 0c307a73a1db57a46a9042a5d5084b05, type: 2}
-  roomPrefab: {fileID: 114454041676981186, guid: 98649f3cf1362974cb100b5de6cf0906,
-    type: 2}
-  RoomSize: 0
-  MaxRooms: 0
-  currentRooms: 0
-  isRoomTouching: 0
-  size:
+  startCoords:
     x: 0
     z: 0
